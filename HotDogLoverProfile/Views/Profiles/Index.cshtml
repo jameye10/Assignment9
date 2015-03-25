@@ -1,0 +1,124 @@
+﻿@model IEnumerable<HotDogLoverProfile.Models.Profile>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+</head>
+<body>
+    <h1>
+        Hot Dog Lover Profile
+    </h1>
+    <p>
+        <div class="Image">
+            <img src="http://cdn4.dogomedia.com/images/dc2d60e9-eb4e-4a04-afc6-35b7061bb370/joey-chestnut-medium.jpg" alt="Joey Chestnut" style="width:260px">
+            <ul>
+                <li>Favorite Hog Dog: All Beef</li>
+                <li>Last Ate: Tom's Wagon</li>
+                <li>Date: 1/12/14</li>
+            </ul>
+            <div id="14272335644758" class="wE">
+                <script src="http://widget-engine.com/w:0:003:14272335644758:1:000:40"
+                        type="text/javascript"></script><a href="http://widget-engine.com/ratingcode.php"
+                                                           class="wE" title="Free Rating Code for your webprojects">Get free premium widgets for your blog and website.</a>
+            </div>
+        </div>
+        <div class="Bio">
+            <h2>John Smith</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non tortor urna.
+        Proin non dui sagittis, placerat dui ac, faucibus massa. Cras eleifend nisi ex, ut posuere magna placerat nec.
+        Donec at laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        Phasellus efficitur feugiat ipsum, eu lobortis sem pharetra quis. Sed congue rhoncus elit, eu imperdiet libero vestibulum id.
+        <br><br>
+        Nam auctor vestibulum nulla, eget rutrum ipsum. Fusce eu viverra purus. Aenean mattis ante nunc, vitae volutpat magna mollis laoreet.
+        Nullam tellus metus, tristique in pharetra at, tristique in risus. Fusce risus magna, sollicitudin eu pretium id, iaculis fringilla felis.
+        Pellentesque non aliquet leo, at ultrices sem. Vestibulum eget nisl nec risus faucibus placerat. Ut nec semper lacus. Aliquam erat volutpat.
+        In hac habitasse platea dictumst. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
+    <br>
+    (This is your personal statement Bio)
+    <br>
+    <h3>Past dogs:</h3>
+    <ul>
+        <li>All Beef (1/12/14)</li>
+        <li>Vegan Delight (1/12/14)</li>
+        <li>Purple People Eater (1/12/14)</li>
+    </ul>
+    </div>
+    </p>
+</body>
+<style>
+    .Bio {
+        margin-left: 275px;
+        margin-top: -385px;
+        padding-right: 400px;
+    }
+
+    h2 {
+        text-decoration: bold;
+    }
+
+    h3 {
+        text-decoration: bold;
+    }
+</style>
+</html>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FavoriteDog)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastAte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EatenDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PastDog1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PastDog2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PastDog3)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FavoriteDog)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastAte)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EatenDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PastDog1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PastDog2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PastDog3)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

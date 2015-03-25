@@ -1,0 +1,66 @@
+﻿@model HotDogLoverProfile.Models.Profile
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Profile</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FavoriteDog)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FavoriteDog)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastAte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastAte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EatenDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EatenDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PastDog1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PastDog1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PastDog2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PastDog2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PastDog3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PastDog3)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
